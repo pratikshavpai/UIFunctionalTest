@@ -1,0 +1,94 @@
+{
+  "plugins": {
+    "view": {
+      "module": "nemo-view",
+      "arguments": [
+        "path:locator"
+      ]
+    },
+    "saucelabs": {
+      "module": "nemo-saucelabs"
+    }
+  },
+  "profiles": {
+    "base": {
+      "tests": "path:./*.js",
+      "env": {
+        "SELENIUM_PROMISE_MANAGER": "0"
+      },
+      "mocha": {
+        "timeout": 180000,
+        "reporter": "mochawesome",
+        "retries": 0,
+        "grep": "argv:grep",
+        "require": [
+          "babel-register"
+        ]
+      }
+    },
+    "chrome": {
+      "driver": {
+        "local": false,
+        "browser": "chrome",
+        "server": "http://pratpai10:a991f751-5586-4aef-a3a7-2423685111e4@ondemand.saucelabs.com:80/wd/hub",
+        "serverCaps": {
+          "username": "pratpai10",
+          "accessKey": "a991f751-5586-4aef-a3a7-2423685111e4",
+          "browserName": "chrome",
+          "platform": "OS X 10.11",
+          "version": "55.0",
+          "idle-timeout": 120
+        }
+      }
+    },
+    "firefox": {
+      "driver": {
+        "local": false,
+        "browser": "firefox",
+        "server": "http://pratpai10:a991f751-5586-4aef-a3a7-2423685111e4@ondemand.saucelabs.com:80/wd/hub",
+        "serverCaps": {
+          "username": "pratpai10",
+          "accessKey": "a991f751-5586-4aef-a3a7-2423685111e4",
+          "browserName": "firefox",
+          "platform": "OS X 10.11",
+          "version": "58.0",
+          "idle-timeout": 120
+        }
+      }
+    },
+    "tab": {
+      "driver": {
+        "local": false,
+        "browser" : "Chrome",
+        "server": "http://pratpai10:a991f751-5586-4aef-a3a7-2423685111e4@ondemand.saucelabs.com:80/wd/hub",
+        "serverCaps": {
+          "username": "pratpai10",
+          "accessKey": "a991f751-5586-4aef-a3a7-2423685111e4",
+          "browserName": "Chrome",
+          "platformName": "Android",
+          "platformVersion": "7.1",
+          "deviceOrientation": "portrait",
+          "deviceName": "Samsung Galaxy Tab A 10 GoogleAPI Emulator",
+          "appiumVersion": "1.7.2"
+        }
+      }
+    },
+    "phone": {
+      "driver": {
+        "local": false,
+        "browser" : "Chrome",
+        "server": "http://pratpai10:a991f751-5586-4aef-a3a7-2423685111e4@ondemand.saucelabs.com:80/wd/hub",
+        "serverCaps": {
+          "username": "pratpai10",
+          "accessKey": "a991f751-5586-4aef-a3a7-2423685111e4",
+          "browserName": "Chrome",
+          "platformName": "Android",
+          "platformVersion": "7.1",
+          "deviceOrientation": "portrait",
+          "deviceName": "Samsung Galaxy S8 Plus GoogleAPI Emulator",
+          "appiumVersion": "1.7.2"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+    "plugins": {
+        "view": {
+            "module": "nemo-view",
+            "arguments": [
+                "path:locator"
+            ]
+        }
+    },
+    "data": {
+        "HOST_URL": "config:HOST_URL"
+    },
+    "output": {
+        "reports": "path:report"
+    },
+    "profiles": {
+        "base": {
+            "tests": "path:./*.js",
+            "env": {
+                "SELENIUM_PROMISE_MANAGER": "0"
+            },
+            "mocha": {
+                "timeout": 180000,
+                "reporter": "mochawesome",
+                "retries": 0,
+                "grep": "argv:grep",
+                "require": [
+                    "babel-register"
+                ]
+            }
+        },
+        "chrome": {
+            "driver": {
+                "browser": "chrome"
+            }
+        }
+    },
+    "HOST_URL": "https://www.netflix.com"
+}
