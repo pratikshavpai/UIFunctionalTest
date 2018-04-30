@@ -87,5 +87,3 @@ password: test123
 Note: On tab setup takes little longer, so please forward video for a minute to watch running test.
 
 
-
-NOTE: To get the boilerplate for node project, initially started with cloning https://github.com/StephenGrider/ReduxSimpleStarter
